@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)http://127.0.0.1:5500/women_safety_app/registration.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+     
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regestration Form </title>
+<style>   
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            background-color:mintcream;            
+        }
+        .container{
+            width: 300px;
+        }
+        h3{
+            font-size: xx-large;
+            margin-bottom: 25px;
+            font-weight: bolder;
+
+        }
+        label{
+            font-weight: bold;
+            font-size: large;
+        }
+        button{
+            width: 100%;
+            margin-top: 30px;
+            background-color: cornflowerblue;
+            color: aliceblue;
+            height: 30px;
+
+        }
+        textarea{
+            width: 100%;
+            height: 60px;
+        }
+        input,
+        select{
+            width: 100%;
+            height: 22px;
+        }
+</style>
+</head>
+<body>
+    <form class="regestration" action="http://127.0.0.1:5500/women_safety_app/action.php">
+        <header>
+        <h3><b>Students Registration Form</b></h3>
+        </header>
+        <div>
+        <label for="Name"> Name</label><br>
+        <input type="text" placeholder="enter your name"><br>
+        <label for="email"> email</label><br>
+        <input type="text" placeholder="enter your email id"><br>
+        <label for="password"> password</label><br>
+        <input type="password" placeholder="Create password"><br>
+        <label for="Mobile Number"> Mobile Number</label><br>
+        <input type="tel" placeholder="enter your Mobile Number"><br>
+        <label for="Date Of Birth"> Date Of Birth</label><br>
+        <input type="date" placeholder="enter your Date Of Birth"><br>
+        <label for="Gender"> Gender</label><br>
+        <input type="radio" value="male" name="male">male<br>
+        <input type="radio" value="female" name="female">female<br>
+        <input type="radio" value="other" name="other">other<br>
+        <label for="Course"> Course</label><br>
+        <select id="course" name="course">
+            <option value="">Select Course</option>
+            <option value="CSE">CSE</option>
+            <option value="AI &amp; ML">AI &amp; ML</option>
+            <option value="DS">DS</option>
+            <option value="IOT">IOT</option>
+            <option value="Cyber Securit">Cyber Security</option>
+        </select><br>
+        <label for="Skills"> Skills</label><br>
+        <input type="checkbox" value="HTML" name="HTML">HTML<br>
+        <input type="checkbox" value="CSS" name="CSS">CSS<br>
+        <input type="checkbox" value="Java Script" name="Java Script">Java Script<br>
+        <input type="checkbox" value="PHP" name="PHP">PHP <br>
+    
+    <label for="Upload Resume">Upload Resume</label><br>
+    <input type="file"><br>
+    <label for="About your Self"> About your Self</label><br>
+    <textarea placeholder="Write Something About yourself"></textarea><br>
+    <button type="submit" value="Register">Register</button>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</div></form></body></html>
